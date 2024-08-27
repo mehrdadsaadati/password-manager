@@ -9,8 +9,10 @@ Stores user's passwords in an encrypted local file or local database. The securi
 ## How to use?
 
 ```bash
-password_manager command arg
+password_manager command arg --master master_key
 ```
+
+For all the commands you can pass master key to unlock the vault. Otherwise master key is asked interactively.
 
 ## Commands
 
