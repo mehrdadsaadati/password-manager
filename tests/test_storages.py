@@ -1,5 +1,6 @@
 from password_manager.storage.in_memory_storage import InMemoryStorage
 from password_manager.storage.ini_file_storage import INIFileStorage
+from password_manager.storage.json_file_storage import JSONFileStorage
 import os
 
 
@@ -44,5 +45,14 @@ def test_ini_file_storage(tmp_path):
     file_path = os.path.join(tmp_path, "ini_file_storage.ini")
 
     storage = INIFileStorage(file_path)
+
+    _test_storage(storage)
+
+
+def test_json_file_storage(tmp_path):
+    """Test put, get, list and delete on the INI file storage"""
+    file_path = os.path.join(tmp_path, "json_file_storage.json")
+
+    storage = JSONFileStorage(file_path)
 
     _test_storage(storage)
