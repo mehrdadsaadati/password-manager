@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "password-manager"
+version = "0.1.0"
+description = ""
+authors = ["mehrdadsaadati <63453421+mehrdadsaadati@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
