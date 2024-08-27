@@ -1,0 +1,1 @@
+from password_manager.storage.ini_file_storage.ini_file_storage import INIFileStorage
