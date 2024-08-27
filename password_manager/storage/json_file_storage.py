@@ -83,6 +83,6 @@ class JSONFileStorage(Storage):
         """Stores the in memory data into the file"""
 
         # create ini text from updated data
-        text = json.dumps(self.__data)
+        text = json.dumps(self.__data, indent=4)
         # write new data to the file
         write_entire_file(self.file_path, text)
