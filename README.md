@@ -9,10 +9,11 @@ Stores user's passwords in an encrypted local file or local database. The securi
 ## How to use?
 
 ```bash
-password_manager command arg --master master_key
+poetry run password_manager
 ```
 
-For all the commands you can pass master key to unlock the vault. Otherwise master key is asked interactively.
+This CLI app is interactive. No commands need to be passed here.
+The master password is asked at the beginning.
 
 ## Commands
 
@@ -21,7 +22,7 @@ For all the commands you can pass master key to unlock the vault. Otherwise mast
 Stores a new password.
 
 ```bash
-password_manager put id password
+> put id password
 ```
 
 #### Args
@@ -34,7 +35,7 @@ password_manager put id password
 Returns the password based on the id.
 
 ```bash
-password_manager get id
+> get id
 ```
 
 #### Args
@@ -46,7 +47,7 @@ password_manager get id
 Returns list of all stored ids.
 
 ```bash
-password_manager list
+> list
 ```
 
 ### Delete
@@ -54,7 +55,7 @@ password_manager list
 Deletes a password based on id.
 
 ```bash
-password_manager delete id
+> delete id
 ```
 
 #### Args
@@ -65,26 +66,25 @@ password_manager delete id
 
 ```bash
 # store a password
-password_manager put gmail abcdefgABCDEFG
+> put gmail abcdefgABCDEFG
 
 # store another one
-password_manager put yahoo qwertyQWERTY
+> put yahoo qwertyQWERTY
 
 # get password of gmail
-password_manager get gmail
-> abcdefgABCDEFG
+> get gmail
+abcdefgABCDEFG
 
 # list all passwords
-password_manager list
-> gmail
-> yahoo
+> list
+  gmail, yahoo
 
 # delete yahoo
-password_manager delete yahoo
+> delete yahoo
 
 # list all passwords
-password_manager list
-> gmail
+> list
+  gmail
 ```
 
 ## Installation
