@@ -14,3 +14,6 @@ cryptography = "^43.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+password_manager = "password_manager.cli:main"
