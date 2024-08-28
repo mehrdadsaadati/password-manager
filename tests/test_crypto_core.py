@@ -1,4 +1,9 @@
-from password_manager.crypto.core import encrypt, decrypt, DecryptionError
+from password_manager.crypto.core import (
+    encrypt,
+    decrypt,
+    DecryptionError,
+    EncryptionError,
+)
 import pytest
 
 
@@ -26,7 +31,7 @@ def test_cryptography():
         decrypt(bytes([1, 2, 3]), enc)
 
     # check invalid key size
-    with pytest.raises(DecryptionError):
+    with pytest.raises(EncryptionError):
         encrypt(bytes([1, 2, 3]), original_data)
 
     # empty input encryption

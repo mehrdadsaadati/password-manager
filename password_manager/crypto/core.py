@@ -22,7 +22,7 @@ def encrypt(key: bytes, plain_data: str, delimiter: str = ":") -> str:
         cipher_text = encryptor.update(plain_data.encode()) + encryptor.finalize()
         return delimiter.join([iv.hex(), cipher_text.hex(), encryptor.tag.hex()])
     except ValueError as exc:
-        raise DecryptionError(f"Invalid key: {exc}")
+        raise EncryptionError(f"Invalid key: {exc}")
 
 
 def decrypt(key: bytes, encrypted_data: str, delimiter: str = ":") -> str:
