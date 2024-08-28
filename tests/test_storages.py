@@ -44,6 +44,7 @@ def test_in_memory_storage():
 
 def test_ini_file_storage(tmp_path):
     """Test put, get, list and delete on the INI file storage"""
+
     file_path = os.path.join(tmp_path, "ini_file_storage.ini")
 
     storage = INIFileStorage(file_path)
@@ -53,6 +54,7 @@ def test_ini_file_storage(tmp_path):
 
 def test_json_file_storage(tmp_path):
     """Test put, get, list and delete on the JSON file storage"""
+
     file_path = os.path.join(tmp_path, "json_file_storage.json")
 
     storage = JSONFileStorage(file_path)
@@ -62,6 +64,7 @@ def test_json_file_storage(tmp_path):
 
 def test_sqlite_storage(tmp_path):
     """Test put, get, list and delete on the Sqlite storage"""
+
     file_path = os.path.join(tmp_path, "sqlite_storage.db")
 
     storage = SqliteStorage(file_path)
